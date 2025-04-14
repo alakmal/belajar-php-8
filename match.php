@@ -1,15 +1,14 @@
 <?php
 
 
-$value = 80;
+$name = "Mr. Eko";
 
-$result = match (true) {
+$result =  match (true) {
+    str_contains($name, "Mr.")
+    => "Hello Sir",
 
-    $value >= 80 => "A",
-    $value >= 70 => "B",
-    $value >= 60 => "C",
-    $value >= 50 => "D",
-    default => "E"
+    str_contains($name, "Mrs.") => "Hello Mam",
+    default => "Hello"
 };
 
-echo "Nilai $value " . PHP_EOL;
+echo $result . PHP_EOL;
