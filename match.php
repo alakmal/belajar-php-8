@@ -1,14 +1,15 @@
 <?php
 
-$value = "A";
 
+$value = 80;
 
-$result = match ($value) {
+$result = match (true) {
 
-    "A", "B", "C" => "Anda lulus",
-    "D" => "Anda Tidak Lulus",
-    "E" => "Sepertinya anda salah jurusan",
-    default => "Nilai Apa itu"
+    $value >= 80 => "A",
+    $value >= 70 => "B",
+    $value >= 60 => "C",
+    $value >= 50 => "D",
+    default => "E"
 };
 
-echo $result . PHP_EOL;
+echo "Nilai $value " . PHP_EOL;
